@@ -9,7 +9,7 @@ type CartContextType = {
   userCart: Product[];
   addProduct: (id: number) => void;
   removeProduct: (id: number) => void;
-  removeAllProduct: (id: number) => void;
+  removeAllProduct: () => void;
   shop: Product[];
 };
 
