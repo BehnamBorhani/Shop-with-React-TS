@@ -4,26 +4,27 @@ import Header from "./components/Header";
 import { useRoutes } from "react-router-dom";
 import routes from "./routes";
 import Home from "./Pages/Home/Home";
+import CartContextProvider from "./context/cartContext";
 
 function App() {
   const router = useRoutes(routes);
   return (
-    // <ContextDataProvider>
-    <div className="app">
-      <Header />
+    <CartContextProvider>
+      <div className="app">
+        <Header />
 
-      {/* Start Content */}
-      {router}
+        {/* Start Content */}
+        {router}
 
-      {/* Finish Content */}
+        {/* Finish Content */}
 
-      <footer>
-        <a target={"_blank"} href="https://sabzlearn.ir">
-          Sabzlearn.ir
-        </a>
-      </footer>
-    </div>
-    // </ContextDataProvider>
+        <footer>
+          <a target={"_blank"} href="https://sabzlearn.ir">
+            Sabzlearn.ir
+          </a>
+        </footer>
+      </div>
+    </CartContextProvider>
   );
 }
 
